@@ -20,11 +20,15 @@
             $result = mysqli_query($connection_to_db,$sql_query);
 
             $result_check = mysqli_num_rows($result);
+
+            var_dump($result);
+            var_dump($result -> num_rows);
         ?>
 
-        
 
                 <?php if($result_check > 0) { ?>
+
+                    <!-- inserico il risultato object? inside an Array -->
                     <?php while($students_per_year = mysqli_fetch_assoc($result)) { ?>
                         
                         <?php //var_dump($students_per_year); ?>
