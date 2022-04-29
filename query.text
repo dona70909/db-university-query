@@ -19,7 +19,7 @@ Query => SELECT * FROM `students` WHERE YEAR(`date_of_birth`) = 1990 ;
 Query => SELECT * FROM `courses` WHERE `cfu` > 10 ORDER BY `cfu` ASC ;
 
 3. Selezionare tutti gli studenti che hanno più di 30 anni
-Query => SELECT * FROM `students` WHERE (2022 - YEAR(`date_of_birth`)) > 30 ORDER BY `date_of_birth` DESC ;
+Query => SELECT * FROM `students` WHERE (YEAR(NOW()) - YEAR(`date_of_birth`)) > 30 ORDER BY `date_of_birth` DESC ;
 
 4. Selezionare tutti i corsi del primo semestre del primo anno di un qualsiasi corso di
 laurea (286)
